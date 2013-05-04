@@ -1,5 +1,4 @@
-clc; clear all;% clf;
-%% Define constants
+﻿clc; clear all;% clf;
 R1 = 1.5e3;%m
 R2 = 2.5e3;%m
 m = 5.0e13;%kg http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=1989AC
@@ -34,7 +33,7 @@ omega_zeta = @(t) omega_0(3)+0.*t; % t vektor, utan +0*t returnerar skalär :-(
 t = linspace(0,100,1000).*24*60^2;
 omega = [omega_xi(t);
         omega_eta(t);
-        omega_zeta(t)];
+        ;
 omegaAbs = sqrt(sum(omega.^2));
     
 I = [I_0 0 0;
